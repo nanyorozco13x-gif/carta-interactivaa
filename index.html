@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Hans</title>
+
+<!-- Fuente cute -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: #b6dbff;
+    background-image:
+        radial-gradient(white 2px, transparent 2px),
+        radial-gradient(white 2px, transparent 2px),
+        linear-gradient(#b6dbff 0%, #b6dbff 100%);
+    background-size: 40px 40px, 60px 60px, 100% 100%;
+    background-position: 0 0, 20px 20px, 0 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.screen {
+    display: none;
+    width: 85%;
+    max-width: 400px;
+    margin: 80px auto;
+    background: white;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.active { display: block; }
+
+.cursive {
+    font-family: 'Pacifico', cursive;
+}
+
+button {
+    margin-top: 25px;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: #ff9bb8;
+    color: white;
+    transition: 0.2s;
+}
+button:hover {
+    transform: scale(1.05);
+}
+
+.cardimg {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+p {
+    white-space: pre-line;
+    text-align: left;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="screen1" class="screen active">
+    <h2 class="cursive" style="font-size: 28px;">
+        Hiiii Hanssss (˶ᵔ ᵕ ᵔ˶) ♡
+        <br>
+        <span style="font-size: 20px;">Click the next button!</span>
+    </h2>
+    <button onclick="goTo(2)">Open it</button>
+</div>
+
+<div id="screen2" class="screen">
+    <h2 class="cursive" style="font-size: 26px;">Do you want to open it?</h2>
+    <button onclick="goTo(3)">Yes</button>
+</div>
+
+<div id="screen3" class="screen">
+    <h2 class="cursive" style="font-size: 30px;">Feliz cumpleaños ♡</h2>
+
+    <p style="font-size: 16px; margin-top: 15px; line-height: 1.5;">
+Feliz cumpleeee Hanssss, ¡Mi persona favorita de todo el universo! Ya tienes 17 años ya estás viejooo y, aunque el tiempo va rapidísimoooo, hoy celebro tu vida, y no hay nada que me haga más feliz que poder recordarte cuánto significas para mí.
+
+Eres alguien que va más allá de cualquier palabra, alguien que ha marcado mi vida de una manera única e irreemplazable. De verdad no hay palabras suficientes para expresar todo lo que siento por ti. Eres mi mundo, mi corazón entero y mi alegría diaria. No importa lo lejos que estemos, siempre logras llenar mis días de luz.
+
+Gracias por estar conmigo incluso cuando no puedo expresarlo con palabras, gracias por ser mi refugio y mi lugar seguro. Tu amistad y tu cariño son un regalo que atesoro cada día. Gracias por escucharme cuando necesito hablar, por cuidarme cuando siento que todo es difícil, y por alegrarme incluso con cosas pequeñas.
+
+A pesar de la distancia, cada llamada, cada mensaje, cada risa y cada momento que pasamos juntos me recuerda lo afortunada que soy de tenerte en mi vida. Te extraño tanto que a veces las palabras no son suficientes para describirlo, pero sabes que aunque haya kilómetros de por medio, siempre estamos juntos.
+
+Eres más que mi primo y mi mejor amigo, eres mi hermano, gracias por existir en mi vida, por estar siempre presente, incluso cuando no puedo verte. Gracias por tu paciencia, tu cuidado, tu amistad sincera y tu amor incondicional. No hay nadie que me haga sentir tan segura y tan feliz como tú lo haces.
+
+Y sí, vv, tus regalos te están esperando, pero nada se compara con el regalo que es tenerte en mi vida. No hay nada que me haga sentir mejor que verte feliz, y siempre quiero lo mejor para ti, porque te mereces todo lo bueno y lo sabes, vv.
+
+Si estoy aquí hoy, si sigo de pie, es gracias a ti. Gracias a tus palabras, a tu cariño, a tu manera de hacerme sentir que no estoy sola y tú tampoco lo estás por qué sabes que me tienes a mí. Siempre encuentras la forma de recordarme que valgo y que tengo a alguien que nunca me soltará, sin importar la distancia ni las circunstancias.
+
+Eres la persona más linda de este planeta, y no lo digo solo por fuera, sino por todo lo que llevas dentro. Tu corazón, tu bondad, tu paciencia, todo en ti es tan único. No hay mejor persona que tú en este mundo, y eso lo tengo muy claro.
+
+Ojalá pudiera abrazarte ahora mismo y decirte todo esto mirándote a los ojos. Decirte que eres mi persona favorita en todo el mundo, la que más quiero, la que más admiro y la que más agradezco tener. No hay forma de describir cuánto te amo y lo importante que eres para mí, porque ni las palabras alcanzan para explicarlo.
+
+Te amooo muchísimooo Tontooo y nuevamente graciasss por existir, por ser tú, y por hacer mi vida tan hermosa con tu presencia. Te amoooo con todo mi almaa, y siempre lo haré.
+    </p>
+
+    <img class="cardimg" src="" alt="photo">
+
+    <button onclick="goTo(4)">Next</button>
+</div>
+
+<div id="screen4" class="screen">
+    <h2 class="cursive" style="font-size: 30px;">
+        Happy Birthday ♡  
+        Sweet Seventeen  
+        <br><br>
+        <span style="font-size: 22px;">Te amo mucho</span>
+    </h2>
+</div>
+
+<script>
+function goTo(n) {
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById('screen' + n).classList.add('active');
+}
+</script>
+
+</body>
+</html>
